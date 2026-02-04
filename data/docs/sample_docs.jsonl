@@ -1,0 +1,3 @@
+{"source":"doc1","text":"Qdrant is a vector database for similarity search. It stores vectors and supports nearest neighbor queries."}
+{"source":"doc2","text":"LangGraph enables building agent workflows as graphs with nodes, edges, state, and conditional routing for tool-using agents."}
+{"source":"doc3","text":"Evaluation of retrieval can be measured using Recall@K, MRR, and nDCG. Agent success can be tracked via task completion and validation checks."}
