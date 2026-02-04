@@ -28,9 +28,11 @@ I created this project to learn more about LangGraph and Qdrant and how everythi
 ### 1) Setup
 
 ```bash
-cp .env.example .env
+touch .env
 # If you want real LLM calls:
 # set LLM_MODE=openai and add OPENAI_API_KEY in .env
+
+pip install -r requirements.txt
 ```
 
 Sample `.env` file:
