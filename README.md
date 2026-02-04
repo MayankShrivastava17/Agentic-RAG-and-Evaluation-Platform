@@ -1,10 +1,10 @@
-# Agentic RAG with LangGraph + Qdrant + FastAPI
+# Agentic RAG and Evaluation Platform
 
 I created this project to learn more about LangGraph and Qdrant and how everything works together in a real agentic RAG system.
 
 >  This is a learning project and not production-ready code.
 
-- **Multi-step agentic AI workflows** using **LangGraph** (plan -> retrieve -> verify -> answer)
+- **Multi-step agentic AI workflows** using **LangGraph** (plan → retrieve → verify → answer)
 - **Embeddings-based retrieval** using **Qdrant** vector store
 - **Evaluation pipelines** for retrieval quality + basic agent performance
 - **REST API** using **FastAPI**
@@ -31,6 +31,26 @@ I created this project to learn more about LangGraph and Qdrant and how everythi
 cp .env.example .env
 # If you want real LLM calls:
 # set LLM_MODE=openai and add OPENAI_API_KEY in .env
+```
+
+Sample `.env` file:
+
+```env
+# LLM provider options:
+# Option A: use OpenAI (recommended if you have a key)
+OPENAI_API_KEY=<YOUR-API-KEY>
+
+# Option B: no key mode (uses a simple local "stub" responder)
+LLM_MODE=stub  # or openai
+OPENAI_MODEL=gpt-4o-mini
+
+# Qdrant
+QDRANT_URL=http://qdrant:6333
+QDRANT_COLLECTION=docs
+
+# Retrieval
+TOP_K=6
+EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 ```
 
 ### 2) Start services
